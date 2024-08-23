@@ -69,13 +69,26 @@ REGULAR DIFFERENCING:
 
 
 
+
+
+
+
+
 SEASONAL ADJUSTMENT:
 ![image](https://github.com/user-attachments/assets/c6d246c9-6423-4fee-8fd9-eaa9c43ad10e)
 
 
 
+
+
+
+
+
+
 LOG TRANSFORMATION:
 ![image](https://github.com/user-attachments/assets/0efd8b1a-4a6a-4920-b015-90783ed53176)
+
+
 
 
 
