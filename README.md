@@ -22,7 +22,7 @@ To perform regular differncing,seasonal adjustment and log transformatio on Ev S
 6.Visualize Transformed Data: Plot the original data, along with the differenced, seasonally adjusted, and log-transformed series to compare the effects of each transformation.
 ### PROGRAM:
 #### IMPORTING PACKAGES:
-```
+```py
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -59,7 +59,7 @@ fig, axes = plt.subplots(5, 1, figsize=(10, 12), sharex=True)
 
 ```
 #### Preprocessing:
-```
+```py
 train=pd.read_csv('EV.csv')
 train.timestamp=pd.to_datetime(train.year,format='%Y')
 train.index=train.timestamp
@@ -70,7 +70,7 @@ train.columns = train.columns.str.strip()
 train['value'].plot()
 ```
 #### REGULAR DIFFERENCING:
-```
+```py
 axes[0].plot(ev_sales.index, ev_sales['value'], label='Original Value')
 axes[0].set_title('Original EV Sales')
 axes[0].legend(loc='upper left')
@@ -80,13 +80,13 @@ axes[1].set_title('Regular Differencing (lag=1)')
 axes[1].legend(loc='upper left')
 ```
 #### SEASONAL DIFFERENCING:
-```
+```py
 axes[2].plot(ev_sales.index, ev_sales['value_seasonal_diff'], label='Seasonal Differencing (lag=12)', color='green')
 axes[2].set_title('Seasonal Differencing (lag=12)')
 axes[2].legend(loc='upper left')
 ```
 #### LOG TRANSFORMATION:
-```
+```py
 axes[3].plot(ev_sales.index, ev_sales['value_log'], label='Log Transformation', color='red')
 axes[3].set_title('Log Transformation')
 axes[3].legend(loc='upper left')
@@ -104,6 +104,7 @@ plt.show()
 
 
 REGULAR DIFFERENCING:
+
 ![image](https://github.com/user-attachments/assets/0c970376-8d71-405f-89f3-08ce5f4dba09)
 
 
@@ -115,6 +116,7 @@ REGULAR DIFFERENCING:
 
 SEASONAL ADJUSTMENT:
 
+
 ![2](https://github.com/user-attachments/assets/b140c8de-8ad6-4206-9c6d-4bb5e22716e0)
 
 
@@ -125,6 +127,8 @@ SEASONAL ADJUSTMENT:
 
 
 LOG TRANSFORMATION:
+
+
 ![1](https://github.com/user-attachments/assets/04ef3805-e574-46e2-bf00-1f430c1d3249)
 
 
